@@ -2,8 +2,10 @@ import React from 'react'
 
 const Map = () => {
   return (
-    <div>
-      
+    <div className='Map'>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   )
 }

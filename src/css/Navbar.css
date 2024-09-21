@@ -1,0 +1,172 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  background-color: #f0f0f0;
+  padding: 10px 0;
+}
+
+.logo {
+  max-width: 100px;
+  float: left;
+}
+
+.header-text {
+  color: #003366;
+  font-size: 18px;
+  margin-left: 120px;
+}
+
+.header-links {
+  float: right;
+  font-size: 12px;
+}
+
+.header-links a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #0077be;
+  color: white;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #005c91;
+}
+
+/* Main Content Styles */
+.main-content {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.sidebar h3 {
+  color: #0077be;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Map Container Styles */
+.map-container {
+  margin-top: 20px;
+}
+
+.map-image {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+/* Form Styles */
+.form-container {
+  margin-bottom: 20px;
+}
+
+select, button {
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+select:hover, button:hover {
+  cursor: pointer;
+}
+
+.factors button {
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 3px;
+  margin-right: 5px;
+  transition: background-color 0.3s;
+}
+
+.factors button:hover {
+  background-color: #cccccc;
+}
+
+.factors button.active {
+  background-color: #0077be;
+  color: white;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .main-content {
+      flex-direction: column;
+  }
+  
+  .sidebar {
+      width: 100%;
+  }
+  
+  nav ul li {
+      display: block;
+      text-align: center;
+  }
+  
+  .header-text {
+      margin-left: 0;
+      text-align: center;
+  }
+  
+  .header-links {
+      float: none;
+      text-align: center;
+      margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+      float: none;
+      display: block;
+      margin: 0 auto;
+  }
+  
+  .form-container select,
+  .form-container button {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
