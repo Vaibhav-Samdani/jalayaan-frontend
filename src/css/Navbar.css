@@ -102,17 +102,7 @@ select:hover, button:hover {
   cursor: pointer;
 }
 
-.factors button {
-  background-color: #e0e0e0;
-  border: none;
-  border-radius: 3px;
-  margin-right: 5px;
-  transition: background-color 0.3s;
-}
 
-.factors button:hover {
-  background-color: #cccccc;
-}
 
 .factors button.active {
   background-color: #0077be;
