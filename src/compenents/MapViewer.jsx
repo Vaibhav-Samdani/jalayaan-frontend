@@ -12,7 +12,7 @@ import chenVishakhaMap from "../images/chenVishakha.jpg";
 import imgMap from "../images/mum_lak.png"
 
 
-function Test() {
+function MapViewer() {
   const pathCoordinates = [
     [19.0759, 72.8777], // Mumbai
     [18.9124, 75.7873], // Mid
@@ -44,14 +44,15 @@ function Test() {
     { text: "All" },
   ];
 
-  const ports = ["Mumbai", "Lakshdweep", "Maldives"];
+  // const ports = ["Mumbai", "Lakshdweep", "Maldives"];
+  const ports = ["Mumbai", "Chennai", "Vishakhapatnam"]
 
   const handleSelect = (e) => {
     console.log(e);
     setSelectedFactor(e);
   };
 
-  useEffect(() => {
+  const showMap = () => {
     if (
       (start === "Mumbai" && dest === "Chennai") ||
       (start === "Chennai" && dest === "Mumbai")
@@ -66,7 +67,7 @@ function Test() {
     }else{
       setMapImg(defaultMap)
     }
-  }, [start, dest]);
+  }
 
 
 
@@ -76,22 +77,30 @@ function Test() {
     const data = {start,dest};
 
     console.log(data);
+    showMap()
 
-    try {
-      const res = await fetch('http://127.0.0.1:5000/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+    // try {
+    //   const res = await fetch('http://127.0.0.1:5000/', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(data),
+    //   });
 
-      const result = await res.json();
-      console.log(result);
-      setResponse(result); // Handle the response here
-    } catch (error) {
-      console.error('Error:', error);
-    }}
+    //   const result = await res.json();
+    //   console.log(result);
+    //   setResponse(result); // Handle the response here
+    // } catch (error) {
+    //   console.error('Error:', error);
+    // }
+
+
+
+
+
+
+  }
   
 
 
@@ -207,7 +216,8 @@ function Test() {
           </div>
 
           <div className="map">
-            <img className="mapImg" src={imgMap} alt="" />
+            {/*<img className="mapImg" src={imgMap} alt="" />*/}
+            <img className="mapImg" src={mapImg} alt="" />
             {/* <Map pathCoordinates={pathCoordinates} /> */}
           </div>
         </div>
@@ -221,4 +231,4 @@ function Test() {
   );
 }
 
-export default Test;
+export default MapViewer;

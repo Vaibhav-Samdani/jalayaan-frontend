@@ -3,7 +3,7 @@ import './App.css';
 import Map from './compenents/Map';
 import Navbar from './compenents/Navbar';
 import SideBar from './compenents/SideBar';
-import Test from './compenents/Test';
+import MapViewer from './compenents/MapViewer';
 import 'leaflet/dist/leaflet.css';
 
 
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       {/* <Navbar/> */}
       {/* <Map/> */}
-      <Test/>
+      <MapViewer/>
       {/* <SideBar/> */}
     </div>
   );
